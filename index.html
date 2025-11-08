@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IgualCast - Reflexões e Ações</title>
+    <meta name="description" content="Projeto IgualCast: promovendo igualdade de gênero através de podcasts, campanhas educativas e acolhimento." />
+
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <div class="top-bar"></div>
+        <div class="header-content">
+            <div class="header-logo-and-nav">
+                <div class="logo-container" data-aos="fade-down">
+                    <a href="#inicio">
+                        <img src="logo.png" alt="Logotipo do projeto IgualCast com uma borboleta" class="logo" width="150" height="auto" />
+                    </a>
+                </div>
+                
+                <button class="menu-toggle" aria-label="Abrir menu de navegação" aria-expanded="false">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+                
+                <nav class="nav-menu" aria-label="Navegação principal" data-aos="fade-down">
+                    <ul>
+                        <li><a href="#inicio" class="nav-link">Início</a></li>
+                        <li><a href="#oque-fazemos" class="nav-link">O que fazemos</a></li>
+                        <li><a href="#quem-somos" class="nav-link">Quem somos</a></li>
+                        <li><a href="#campanhas" class="nav-link">Campanhas</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="hero" id="inicio">
+                <h1 class="logo_escrita" data-aos="zoom-in">Igual Cast</h1>
+                <p class="slogan" data-aos="fade-up">Reflexões e Ações pela Igualdade de Gênero</p>
+                <a
+                    href="index.html"
+                    class="btn-podcast"
+                    data-aos="fade-up"
+                    data-aos-delay="500"
+                >
+                    Ouça nossos Podcasts
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="oque-fazemos" class="section-fazemos" data-aos="fade-right">
+            <div class="container">
+                <div class="bubble-box">
+                    <h2>O que fazemos</h2>
+                    <p>
+                        O Projeto IgualCast, desenvolvido por alunos do SENAC, nasceu com o propósito de promover a conscientização sobre a violência doméstica e verbal contra as mulheres, alinhando-se ao ODS 5 - Igualdade de Gênero da ONU.
+                    </p>
+                    <p>
+                        Nosso objetivo é claro: incentivar mulheres a buscarem ajuda e não aceitarem qualquer tipo de agressão. Acreditamos na força do acolhimento, da informação e do diálogo para transformar realidades.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="significado-logo" class="section-significado" data-aos="fade-left">
+            <div class="container">
+                <div class="content-wrapper-reverse logo-meaning-wrapper">
+                    <div class="image-box-significado">
+                        <img src="logo.png" alt="Logo com borboleta representando liberdade" width="200" height="auto" />
+                    </div>
+                    <div class="text-box-significado">
+                        <h2>O que significa nossa logo</h2>
+                        <p>
+                            A borboleta representa transformação, liberdade e renovação. Ela simboliza a jornada de superação das mulheres que lutam contra a violência e buscam uma vida mais justa e igualitária.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="quem-somos" class="section-quem-somos" data-aos="fade-up">
+            <div class="container">
+                <h2>Nosso Time</h2>
+                <div class="team-list">
+                    <ul>
+                        <li>Bianca</li>
+                        <li>Bruno</li>
+                        <li>João Vicente</li>
+                        <li>Pedro</li>
+                        <li>Sabrina</li>
+                        <li>Thais</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="campanhas" class="section-campanhas" data-aos="fade-left">
+            <div class="container">
+                <h2 data-aos="fade-down">Nossas Campanhas de Apoio</h2>
+                <p data-aos="fade-up">
+                    Realizamos campanhas para apoiar mulheres que sofrem violência doméstica e verbal através de:
+                </p>
+                <div class="campanhas-list">
+                    <div class="campanha-item" data-aos="flip-left" data-aos-delay="200">
+                        <h3>Podcast</h3>
+                        <p>Discussões e entrevistas sobre temas relevantes à luta feminina.</p>
+                    </div>
+                    <div class="campanha-item" data-aos="flip-right" data-aos-delay="400">
+                        <h3>Panfleto</h3>
+                        <p>Materiais informativos com dados e contatos de apoio para mulheres em situação de risco.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 IgualCast. Todos os direitos reservados.</p>
+            <p>Desenvolvido por alunos do SENAC - Projeto FalaIgual.</p>
+        </div>
+    </footer>
+
+
+    <div class="menu-overlay"></div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000 });
+
+        // --- SCRIPT DO MENU HAMBURGER (Versão Limpa para HOME.HTML) ---
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        const menuOverlay = document.querySelector('.menu-overlay');
+        const navLinks = document.querySelectorAll('.nav-link');
+        const body = document.body; 
+
+        function openMenu() {
+            navMenu.classList.add('active');
+            menuToggle.classList.add('active');
+            menuOverlay.classList.add('active');
+            menuToggle.setAttribute('aria-expanded', 'true');
+            body.classList.add('menu-open'); 
+        }
+
+        function closeMenu() {
+            navMenu.classList.remove('active');
+            menuToggle.classList.remove('active');
+            menuOverlay.classList.remove('active');
+            menuToggle.setAttribute('aria-expanded', 'false');
+            body.classList.remove('menu-open'); 
+        }
+        
+        function toggleMenu() {
+            const isOpen = navMenu.classList.contains('active');
+            if (isOpen) {
+                closeMenu();
+            } else {
+                openMenu();
+            }
+        }
+
+        menuToggle.addEventListener('click', toggleMenu);
+        menuOverlay.addEventListener('click', closeMenu);
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+                closeMenu();
+            }
+        });
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768 && navMenu.classList.contains('active')) {
+                closeMenu();
+            }
+        });
+        // --- FIM SCRIPT DE MENU ---
+    </script>
+</body>
+</html>
